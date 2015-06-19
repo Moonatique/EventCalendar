@@ -1,0 +1,29 @@
+.card.active{
+	background-color:red;
+	opacity: 1;	
+}
+.card{
+	cursor:pointer;
+	background-color:white;
+	margin-bottom:0px;	
+	opacity: 0.6;
+	height: 140px;	
+}
+.complete-card{
+	cursor:no-drop;
+	background-color:white;
+	margin-bottom:0px;	
+	opacity: 0.6;	
+	height: 140px;	
+}
+.card img{
+	display:none;
+}
+.card.active img{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.calendar{
+	padding: 0px;
+}

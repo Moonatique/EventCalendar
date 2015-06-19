@@ -1,0 +1,1 @@
+@DayCards = new Meteor.Collection 'daysCards'
