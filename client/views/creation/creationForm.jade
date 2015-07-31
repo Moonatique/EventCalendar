@@ -3,6 +3,14 @@ template(name="creationForm")
 		div.form-group
 			label(for="mailDest") Destination email
 			input(type="email", class="form-control", placeholder="Enter email")#mailDest
-		div.form-group
-			label(for="backImg") Choose a background image
-			input(type="file")#backImg
+		p= currentDayForm
+		div.dropdown
+			button(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="true").btn.btn-primary.dropdown-toggle#month-menu #{currentMonth}
+				span.caret
+			ul(aria-labelledby="month-menu").dropdown-menu
+				each monthsAvailable
+					li
+						a(href="#")#month-item= month
+		//- div.form-group
+		//- 	label(for="backImg") Choose a background image
+		//- 	input(type="file")#backImg

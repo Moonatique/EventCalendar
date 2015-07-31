@@ -1,2 +1,2 @@
 Template.header.helpers
-	welcome: -> if Meteor.user() then 'Hello my Love' else 'Hi Buddy'
+	username: -> if Meteor.user() then Meteor.user().username else 'Buddy'

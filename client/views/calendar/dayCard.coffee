@@ -1,10 +1,9 @@
 Template.dayCard.events
 	'click .card': (e) ->
-		if $(e.target).hasClass 'card'
-			p = $(e.target)
-		else
-			p = $(e.target).parent()
-
+		p = $(e.target)
+		while(!p.hasClass 'card')
+			p = p.parent()
+		
 		if p.hasClass('active') 
 			p.removeClass('active')
 		else

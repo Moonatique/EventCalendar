@@ -1,7 +1,13 @@
-Meteor.publish 'dayCards', (dest)->
-	maxD = moment().date() + 1
-	DayCards.find
-		dest: dest
-		i: $lt: maxD
-
 Meteor.publish 'images', -> Images.find()
+Meteor.publish 'calendars', (user)->
+	now = moment()
+	Calendars.find
+		$or:
+			[
+				date: now.format('YYYY-MM')
+				dest: user			
+				day: $lt: now.date() + 1
+				
+				owner: user				
+			]
+		

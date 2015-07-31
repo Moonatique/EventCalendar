@@ -7,11 +7,11 @@ template(name='header')
 					span.icon-bar
 					span.icon-bar
 					span.icon-bar
-				a.navbar-brand(href="/") #{welcome}
+				a.navbar-brand(href="/") Welcome #{username}
 			div.collapse.navbar-collapse#myNavHeader
 				ul.nav.navbar-nav
 					li: a(href="{{pathFor 'creation'}}") Creation
-				ul.nav.navbar-nav.navbar-right
+				ul.nav.navbar-nav
 					li
 						+loginButtons
 					

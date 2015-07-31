@@ -1,5 +1,5 @@
 .card.active{
-	background-color:red;
+	/*background-color:red;*/
 	opacity: 1;	
 }
 .card{
@@ -16,14 +16,23 @@
 	opacity: 0.6;	
 	height: 140px;	
 }
-.card img{
+.card .verso{
 	display:none;
 }
-.card.active img{
+.card.active .verso{
 	display:block;
 	margin-left: auto;
 	margin-right: auto;
 }
+.card.active .recto{
+	display: none;
+}
 .calendar{
 	padding: 0px;
+	background-image: url('fight_cats.jpg') ;
+}
+.cardForm{
+	margin-bottom:0px;	
+	height: 50px;
+	cursor:pointer;		
 }

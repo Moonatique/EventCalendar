@@ -1,0 +1,8 @@
+template(name="calendar")
+	div.container-fluid.calendar
+		if textsDays
+			each textsDays
+				+dayCard
+			each completeTextsDays
+				div.panel.panel-default.col-lg-2.complete-card
+					p= i

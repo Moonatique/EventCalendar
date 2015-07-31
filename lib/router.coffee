@@ -2,8 +2,8 @@ Router.configure
 	layoutTemplate: 'layout',
 	loadingTemplate: 'loading',
 	waitOn: ->
-	 Meteor.subscribe 'dayCards', if Meteor.user() then 'claudia' else 'default'
 	 Meteor.subscribe 'images'
+	 Meteor.subscribe 'calendars', if Meteor.user() then Meteor.user()._id else 0
 
 Router.map ->
 	@route 'calendar',
