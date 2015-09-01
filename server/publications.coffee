@@ -1,13 +1,10 @@
 Meteor.publish 'images', -> Images.find()
-Meteor.publish 'calendars', (user)->
-	now = moment()
+Meteor.publish 'calendars_dest', (user)->
 	Calendars.find
-		$or:
-			[
-				date: now.format('YYYY-MM')
-				dest: user			
-				day: $lt: now.date() + 1
-				
-				owner: user				
-			]
-		
+		dest: user			
+		date: moment().format('YYYY-MM')
+		day: $lt: moment().date() + 1
+Meteor.publish 'calendars_owner', (user)->
+	Calendars.find
+		owner: user
+

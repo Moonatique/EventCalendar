@@ -3,8 +3,9 @@ Router.configure
 	loadingTemplate: 'loading',
 	waitOn: ->
 	 Meteor.subscribe 'images'
-	 Meteor.subscribe 'calendars', if Meteor.user() then Meteor.user()._id else 0
-
+	 Meteor.subscribe 'calendars_dest', if Meteor.user() then Meteor.user().username else 'default'
+	 Meteor.subscribe 'calendars_owner', if Meteor.user() then Meteor.user().username else 'default'
+	 
 Router.map ->
 	@route 'calendar',
 		path: '/'

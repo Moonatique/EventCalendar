@@ -7,6 +7,7 @@ Template.dayCard.events
 		if p.hasClass('active') 
 			p.removeClass('active')
 		else
-			p.addClass('active')
+			p.addClass('active')	
+
 
 		
